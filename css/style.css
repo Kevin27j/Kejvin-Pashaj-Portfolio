@@ -76,3 +76,124 @@ a {
   color: var(--nav-text);
   margin: 10px 40px;
 }
+
+/* BANNER STYLES */
+.banner {
+  /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/hero-banner.jpg");
+  /* Banner takes full screen height */
+  height: 100vh;
+  /* Position and center picture */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+  /* Center in the middle of the banner */
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  vertical-align: middle;
+}
+
+.banner-title {
+  color: white;
+  font-size: 60px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* MAIN */
+.page-wrapper {
+  background: var(--main-background);
+}
+
+.page-section {
+  padding: 50px 50px;
+  display: flex;
+  justify-content: flex-start;
+  min-height: 40vh;
+}
+
+.page-section h2 {
+  min-width: 180px;
+  padding-right: 50px;
+  margin-right: 50px;
+  border-right: var(--borders) solid;
+}
+
+.about-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-wrap p {
+  margin-bottom: 40px;
+}
+
+/* PORTFOLIO STYLES / GRID */
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 300px 250px 250px;
+  grid-template-areas: 
+  "one one"
+  "two three" 
+  "four five"
+  ;
+  width: 80%;
+}
+
+#one {
+  grid-area: one;
+}
+#two {
+  grid-area: two;
+}
+#three {
+  grid-area: three;
+}
+#four {
+  grid-area: four;
+}
+#five {
+  grid-area: five;
+}
+
+.grid-item {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/work-in-progress.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  border: 5px solid var(--main-borders);
+  margin: 1em;
+}
+
+.grid-item h3 {
+  color: var(--nav-text);
+  padding: 10px 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* CONTACT STYLES */
+.contact-links {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.contact-links li {
+  padding: 0 30px;
+}
