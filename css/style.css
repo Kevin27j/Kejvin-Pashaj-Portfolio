@@ -80,7 +80,7 @@ a {
 /* BANNER STYLES */
 .banner {
   /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/hero-banner.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero-banner.jpg");
   /* Banner takes full screen height */
   height: 100vh;
   /* Position and center picture */
@@ -172,7 +172,7 @@ a {
 }
 
 .grid-item {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/work-in-progress.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/work-in-progress.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; 
