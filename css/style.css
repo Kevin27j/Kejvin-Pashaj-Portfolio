@@ -181,7 +181,7 @@ a {
 .grid-container {
   display: grid;
   grid-template-columns: 2fr 2fr;
-  grid-template-rows: 300px 250px 250px;
+  grid-template-rows: 550px 350px 350px;
   grid-template-areas: 
   "one one"
   "two three" 
@@ -192,6 +192,7 @@ a {
 
 #one {
   grid-area: one;
+  background-image: url("/images/interactive-rating-component.jpg");
 }
 #two {
   grid-area: two;
@@ -291,5 +292,13 @@ a {
 
   .grid-container {
     margin: 0 auto;
+  }
+
+  .contact-links {
+    flex-direction: column;
+  }
+
+  .contact-links li {
+    padding: 15px 0;
   }
 }
