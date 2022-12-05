@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu+Mono:wght@400;700&display=swap');
+
 :root {
-  /* COLOR VARIABLES */
+  /* COLORS */
   --borders: #fca311;
   /* Nav Bar Colors */
   --nav-background: #000103;
@@ -7,6 +9,10 @@
   /* Main Colors */
   --main-background: #e5e5e5;
   --main-text: #000103;
+
+  /* FONT FAMILY */
+  --mont: 'Montserrat', sans-serif;
+  --ubuntu: 'Ubuntu Mono', monospace;
 }
 
 
@@ -20,8 +26,11 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: var(--mont);
+  font-weight: 400;
+  font-style: normal;
   line-height: 1.5;
+  width: 100%;
 }
 
 h1,
@@ -43,7 +52,10 @@ li {
 
 a {
   text-decoration: none;
-  color: black;
+  font-family: var(--ubuntu);
+  font-weight: bold;
+  color: var(--nav-text);
+  font-size: 1.2rem;
 }
 
 /* GENERAL FLEX STYLE */
@@ -71,11 +83,34 @@ a {
   padding: 0;
 }
 
-.nav-link {
-  font-size: 18px;
-  color: var(--nav-text);
-  margin: 10px 40px;
+.nav-menu li {
+  display: inline-block;
+  padding: 0px 30px;
 }
+
+.nav-link {
+  position: relative;
+}
+
+/* Use :after combined with :hover to create underline animation when hover on links */
+.nav-link:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 1px;
+  right: 0;
+  background: var(--borders);
+  transition: width .2s ease;
+}
+
+.nav-link:hover:after {
+  width: 100%;
+  left: 0;
+  background: var(--borders);
+}
+
 
 /* BANNER STYLES */
 .banner {
@@ -117,6 +152,7 @@ a {
 /* MAIN */
 .page-wrapper {
   background: var(--main-background);
+  letter-spacing: 1.5px;
 }
 
 .page-section {
@@ -128,7 +164,6 @@ a {
 
 .page-section h2 {
   min-width: 180px;
-  padding-right: 50px;
   margin-right: 50px;
   border-right: var(--borders) solid;
 }
@@ -239,7 +274,7 @@ a {
   }
 
   .page-wrapper {
-    padding: 30px;
+    padding: 10px;
   }
 
   .page-section {
