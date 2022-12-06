@@ -192,7 +192,7 @@ a {
 
 #one {
   grid-area: one;
-  background-image: url("/images/interactive-rating-component.jpg");
+  background-image: url("../images/interactive-rating-component.jpg");
 }
 #two {
   grid-area: two;
